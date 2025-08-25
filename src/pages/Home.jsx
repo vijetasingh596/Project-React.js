@@ -25,11 +25,11 @@ const Home = () => {
               return (
                 <div
                   key={id}
-                  className="h-[200px] flex shadow-2xl  flex-col justify-center w-[300px] rounded-2xl"
+                  className="h-[200px] flex shadow-2xl flex-col items-center gap-4 justify-center w-[300px] rounded-2xl "
                 >
                   <h4>{category}</h4>
                   <h1>{title}</h1>
-                  <p>{description}</p>
+                  <p className="text-center">{description}</p>
                 </div>
               );
             })}
