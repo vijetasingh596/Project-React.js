@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import { AxiosInstance } from "../routes/axiosInstance";
+import BlogCard from "../components/BlogCard";
 
 const Home = () => {
   const [allBlogs, setAllBlogs] = useState([]);
@@ -15,23 +16,14 @@ const Home = () => {
   return (
     <div>
       <NavBar />
-      <section className="h-full w-full">
+      <section>
         {allBlogs.length === 0 ? (
           <h2>NO blogs available</h2>
         ) : (
-          <article className=" flex justify-evenly gap-5 flex-wrap">
-            {allBlogs.map((blog) => {
-              let { id, title, description, category } = blog;
-              return (
-                <div
-                  key={id}
-                  className="h-[200px] flex shadow-2xl flex-col items-center gap-4 justify-center w-[300px] rounded-2xl "
-                >
-                  <h4>{category}</h4>
-                  <h1>{title}</h1>
-                  <p className="text-center">{description}</p>
-                </div>
-              );
+          <article className="grid grid-cols-1 md:grid-cols-4">
+            {allBlogs.map((blog,idx) => {
+              // let { id, title, description, category } = blog;
+              return <BlogCard key={idx} blog={blog}/>
             })}
           </article>
         )}

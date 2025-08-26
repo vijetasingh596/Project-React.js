@@ -3,7 +3,7 @@ import { FaDribbble } from "react-icons/fa";
 import { FaBehance } from "react-icons/fa";
 const NavBar = () => {
   return (
-    <nav className="bg-white shadow-lg h-20 w-full p-3 flex items-center justify-between sticky top-0">
+    <nav className="bg-white z-50 shadow-lg h-20 w-full p-3 flex items-center justify-between sticky top-0">
       <figure className="text-2xl font-extrabold">
         <span className="text-orange-400">Q</span>-Blogs
       </figure>
