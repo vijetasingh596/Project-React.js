@@ -4,7 +4,7 @@ import { Toaster } from 'react-hot-toast'
 const App = () => {
   return (
     <main className='h-screen w-full'>
-      <Toaster/>
+      <Toaster />
       <Outlet/>
     </main>
   )

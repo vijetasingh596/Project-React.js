@@ -53,6 +53,12 @@
       "username": "",
       "email": "",
       "password": ""
+    },
+    {
+      "id": "4eee",
+      "username": "mohan1",
+      "email": "mohan@gmail.com",
+      "password": "123"
     }
   ],
   "blogs": [

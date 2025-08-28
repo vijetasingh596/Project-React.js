@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
 
 const style = {
   position: "absolute",
@@ -44,7 +45,7 @@ export default function EditModal() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={{ ...style, position: "relative" }}>
-          {/* Close Button
+          Close Button
           <IconButton
             onClick={handleClose}
             sx={{
@@ -55,7 +56,7 @@ export default function EditModal() {
             }}
           >
           <CloseIcon />
-          </IconButton> */}
+          </IconButton>
           <h1 className="text-center font-bold text-2xl mb-5">Edit blogs</h1>
           <div className="flex flex-col gap-3">
             <TextField
@@ -65,7 +66,7 @@ export default function EditModal() {
               name="category"
               id="outlined-basic"
               label="Category"
-              variant="filled"
+              variant="outlined"
             />
             <TextField
               value={editBlog.title}
@@ -74,7 +75,7 @@ export default function EditModal() {
               name="title"
               id="outlined-basic"
               label="Title"
-              variant="filled"
+              variant="outlined"
             />
             <TextField
               value={editBlog.description}
@@ -83,7 +84,7 @@ export default function EditModal() {
               name="description"
               id="outlined-basic"
               label="Description"
-              variant="filled"
+              variant="outlined"
             />
           </div>
           <button className="bg-blue-400 p-3 py-1 px-4 block mx-auto mt-5 rounded text-white">
