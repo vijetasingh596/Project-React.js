@@ -23,7 +23,7 @@ const Home = () => {
           <article className="grid grid-cols-1 md:grid-cols-4">
             {allBlogs.map((blog,idx) => {
               // let { id, title, description, category } = blog;
-              return <BlogCard key={idx} blog={blog}/>
+              return <BlogCard key={idx} blog={blog} getAllBlogs={getAllBlogs}/>
             })}
           </article>
         )}

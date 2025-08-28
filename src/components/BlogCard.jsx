@@ -1,8 +1,20 @@
 import React from "react";
 import EditModal from "./EditModal";
+import { AxiosInstance } from "../routes/axiosInstance";
+import toast from "react-hot-toast";
 
 const BlogCard = (props) => {
-    let{id,category,title,description}=props.blog
+  const deletBlog=async (blogId)=>{
+    let res=await AxiosInstance.delete(`/blogs/${blogId}`);
+    if(res.status===200){
+      toast.success("Blog deleted")
+      props.getAllBlogs()
+    }else{
+      toast.error("Delete Failed")
+    }
+    console.log("blog id to be deleted",blogId);  
+  }
+  let { id, category, title, description } = props.blog;
   return (
     <div
       key={id}
@@ -10,12 +22,14 @@ const BlogCard = (props) => {
     >
       <h4 className="text-blue-800 font-semibold mb-4">{category}</h4>
       <h1 className="font-semibold  text-lg">{title}</h1>
-      <p  className="text-gray-600 mb-15">{description}</p>
+      <p className="text-gray-600 mb-15">{description}</p>
       <div className="flex">
         <div className="border py-1 px-5 rounded cursor-pointer font-bold">
-            <EditModal/>
+          <EditModal editBlog={props.blog} getAllBlogs={props.getAllBlogs} />
         </div>
-        <button className="border py-1 px-5 ms-2 rounded cursor-pointer font-bold">Delete</button>
+        <button onClick={()=>deletBlog(id)} className="border py-1 px-5 ms-2 rounded cursor-pointer font-bold">
+          Delete
+        </button>
       </div>
     </div>
   );

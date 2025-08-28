@@ -63,45 +63,9 @@
   ],
   "blogs": [
     {
-      "title": "Understanding Node.js Event Loop",
-      "description": "event loop in nodejs explained with phases and examples to simplify asynchronous operations",
-      "category": "Node.js",
-      "createdBy": {
-        "_id": "64a1f3b4c9d8f20011a1a111",
-        "userName": "Amit Sharma"
-      },
-      "createdAt": "2025-08-01T10:15:00Z",
-      "updatedAt": "2025-08-01T10:15:00Z",
-      "id": "6b96"
-    },
-    {
-      "title": "Mastering Express Middleware",
-      "description": "middleware in express are functions that execute during request and response lifecycle to add power and flexibility",
-      "category": "Express.js",
-      "createdBy": {
-        "_id": "64a1f3b4c9d8f20011a1a112",
-        "userName": "Neha Gupta"
-      },
-      "createdAt": "2025-08-02T09:30:00Z",
-      "updatedAt": "2025-08-02T09:30:00Z",
-      "id": "ee4d"
-    },
-    {
-      "title": "Intro to MongoDB Aggregations",
-      "description": "aggregation in mongodb allows advanced querying grouping and transforming of data with pipelines",
-      "category": "MongoDB",
-      "createdBy": {
-        "_id": "64a1f3b4c9d8f20011a1a113",
-        "userName": "Rahul Verma"
-      },
-      "createdAt": "2025-08-03T11:45:00Z",
-      "updatedAt": "2025-08-03T11:45:00Z",
-      "id": "830e"
-    },
-    {
       "title": "JWT Authentication Simplified",
       "description": "json web tokens jwt are used to securely transmit information between parties and implement authentication",
-      "category": "Authentication",
+      "category": "hufyfeyfifweoeoiuewo",
       "createdBy": {
         "_id": "64a1f3b4c9d8f20011a1a114",
         "userName": "Priya Singh"

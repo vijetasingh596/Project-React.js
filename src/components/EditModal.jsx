@@ -6,6 +6,8 @@ import Modal from "@mui/material/Modal";
 import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
+import toast from "react-hot-toast";
+import { AxiosInstance } from "../routes/axiosInstance";
 
 const style = {
   position: "absolute",
@@ -19,21 +21,39 @@ const style = {
   p: 4,
   borderRadius: "15px",
 };
-
-export default function EditModal() {
+export default function EditModal(props) {
+  // console.log(props.editBlog);
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
+  
   const [editBlog, setEditBlog] = React.useState({
     category: "",
     title: "",
     description: "",
   });
+
+  const handleUpdate=async (e)=>{
+   e.preventDefault()
+   console.log("form update");
+   handleClose()
+   let res=await AxiosInstance.put(`/blogs/${editBlog.id}`,editBlog);
+   if(res.status===200){
+    toast.success("Blog Updated")
+    props.getAllBlogs()
+   }else{
+    toast.error("Update failed")
+   }
+   
+  }
   const handleChange = (e) => {
     let { name, value } = e.target;
     setEditBlog({ ...editBlog, [name]: value });
   };
+
+  React.useEffect(()=>{
+  setEditBlog(props.editBlog)
+  },[])
 
   return (
     <div>
@@ -87,7 +107,7 @@ export default function EditModal() {
               variant="outlined"
             />
           </div>
-          <button className="bg-blue-400 p-3 py-1 px-4 block mx-auto mt-5 rounded text-white">
+          <button onClick={handleUpdate} className="bg-blue-400 p-3 py-1 px-4 block mx-auto mt-5 rounded text-white">
             Update
           </button>
         </Box>
