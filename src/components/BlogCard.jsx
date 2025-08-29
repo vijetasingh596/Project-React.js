@@ -4,7 +4,12 @@ import { AxiosInstance } from "../routes/axiosInstance";
 import toast from "react-hot-toast";
 
 const BlogCard = (props) => {
+  let token=localStorage.getItem("token")
   const deletBlog=async (blogId)=>{
+    if(!token){
+      toast.error("login Required")
+      return;
+    }
     let res=await AxiosInstance.delete(`/blogs/${blogId}`);
     if(res.status===200){
       toast.success("Blog deleted")

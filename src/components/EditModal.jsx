@@ -22,10 +22,21 @@ const style = {
   borderRadius: "15px",
 };
 export default function EditModal(props) {
+
+  let token=localStorage.getItem("token")
+
   // console.log(props.editBlog);
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleOpen = () => {
+    if(!token){
+      toast.error("login Required")
+      return ;
+    }
+    setOpen(true)
+  };
+  const handleClose = () => {
+    setOpen(false)
+  };
   
   const [editBlog, setEditBlog] = React.useState({
     category: "",

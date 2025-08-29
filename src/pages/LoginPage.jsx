@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { AxiosInstance } from "../routes/axiosInstance";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import NavBar from "../components/NavBar";
 const LoginPage = () => {
   const [loginUser, setLoginUser] = useState({
     email: "",
@@ -48,6 +49,7 @@ const LoginPage = () => {
   };
 
   return (
+
     <div className="h-full w-full bg-amber-300 flex items-center justify-center">
       <form
         className="bg-white flex flex-col p-5 gap-2 rounded-2xl shadow-2xl"

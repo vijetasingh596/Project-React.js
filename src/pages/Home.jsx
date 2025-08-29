@@ -15,7 +15,6 @@ const Home = () => {
   }, []);
   return (
     <div>
-      <NavBar />
       <section>
         {allBlogs.length === 0 ? (
           <h2>NO blogs available</h2>
