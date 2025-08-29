@@ -27,9 +27,7 @@ const NavBar = () => {
         </li>
         <li className="cursor-pointer">
              <FaDribbble/>
-        </li>
-        
-         
+        </li>  
         {token?<>
         <li className="cursor-pointer">
           <button onClick={openDrowpdown} className="relative border px-5 p-3 rounded-full bg-blue-500 text-white">
