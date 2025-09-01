@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import NavBar from "../components/NavBar";
 import { AxiosInstance } from "../routes/axiosInstance";
 import BlogCard from "../components/BlogCard";
 
