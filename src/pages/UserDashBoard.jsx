@@ -43,7 +43,7 @@ const UserDashBoard = () => {
     
     
   }
-  let { id } = useParams();//return object {id:"bd08"}
+  let { id } = useParams();//return object {id:"bd08"} it works like url id to access
 
   const [user, setUser] = useState({});
 

@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { FaDribbble } from "react-icons/fa";
 import { FaBehance } from "react-icons/fa";
+import { IoHome } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 const NavBar = () => {
@@ -30,6 +31,9 @@ const NavBar = () => {
         <li className="cursor-pointer">
              <FaDribbble/>
         </li>  
+        <Link to={"/"} className="cursor-pointer">
+             <IoHome />
+        </Link>  
         {token?<>
         <li className="cursor-pointer">
           <button onClick={openDrowpdown} className="relative border px-5 p-3 rounded-full bg-blue-500 text-white">

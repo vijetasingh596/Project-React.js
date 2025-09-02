@@ -61,7 +61,7 @@ export default function EditModal(props) {
     let { name, value } = e.target;
     setEditBlog({ ...editBlog, [name]: value });
   };
-
+  
   React.useEffect(()=>{
   setEditBlog(props.editBlog)
   },[])

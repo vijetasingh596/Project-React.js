@@ -220,16 +220,13 @@
       "updatedAt": "2025-09-02T06:18:24.697Z"
     },
     {
-      "id": "081d",
-      "title": "Programming language ",
-      "category": "java",
-      "description": "Simple language",
-      "createBy": {
-        "_id": "3ab3",
-        "userName": "mohan"
-      },
-      "createdAt": "2025-09-02T06:22:43.626Z",
-      "updatedAt": "2025-09-02T06:22:43.626Z"
+      "id": "a870",
+      "title": "Spring core and Spring boot ",
+      "category": " Advance Spring ",
+      "description": "spring boot is very popular language spring boot is very popular language and it is used to create very active web application  and it is used to create very active web application ",
+      "createBy": {},
+      "createdAt": "2025-09-02T12:36:23.935Z",
+      "updatedAt": "2025-09-02T12:36:23.935Z"
     }
   ]
 }
