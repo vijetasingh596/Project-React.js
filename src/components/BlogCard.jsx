@@ -32,7 +32,7 @@ const BlogCard = (props) => {
         <div className="border py-1 px-5 rounded cursor-pointer font-bold">
           <EditModal editBlog={props.blog} getAllBlogs={props.getAllBlogs} />
         </div>
-        <button onClick={()=>deletBlog(id)} className="border py-1 px-5 ms-2 rounded cursor-pointer font-bold">
+        <button onClick={()=>deletBlog(id)} className="border py-1 px-5 ms-2 rounded cursor-pointer font-bold text-blue-500 ">
           Delete
         </button>
       </div>

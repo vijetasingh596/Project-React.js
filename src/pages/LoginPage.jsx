@@ -1,11 +1,13 @@
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AxiosInstance } from "../routes/axiosInstance";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import NavBar from "../components/NavBar";
+import { AuthContext } from "../context/AuthContext";
 const LoginPage = () => {
+  const {setLoggestInUser}=useContext(AuthContext)
   const [loginUser, setLoginUser] = useState({
     email: "",
     password: "",
@@ -37,6 +39,7 @@ const LoginPage = () => {
 
     if(authUser){
         localStorage.setItem("token",Date.now())
+        setLoggestInUser(authUser)
         //navigate to home pages
         navigate("/")
         toast.success("login success")

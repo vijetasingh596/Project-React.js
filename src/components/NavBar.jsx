@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { FaDribbble } from "react-icons/fa";
 import { FaBehance } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 const NavBar = () => {
-
+  const{loggedInUser}=useContext(AuthContext)
+  // console.log(loggedInUser.id);
   let navigate=useNavigate()
   const[toggle,setToggle]=useState(false)
 
@@ -34,7 +36,7 @@ const NavBar = () => {
             profile
            {toggle?<>
             <ul className="absolute bg-white rounded  shadow-2xl right-0 top-13 border border-gray-200 text-black p-2">
-              <li className="px-4 py-1 hover:text-blue-600 cursor-pointer">Dashboard</li>
+              <Link to={`/userdashboard/${loggedInUser?.id}`}><li className="px-4 py-1 hover:text-blue-600 cursor-pointer">Dashboard</li></Link>
               <li onClick={handleLogout} className="px-4 py-1 hover:text-blue-600 cursor-pointer">Logout</li>
             </ul>
            </>:null}

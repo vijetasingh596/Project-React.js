@@ -68,7 +68,7 @@ export default function EditModal(props) {
 
   return (
     <div>
-      <button onClick={handleOpen}>Edit</button>
+      <button className="text-red-500 border-red-600" onClick={handleOpen}>Edit</button>
       <Modal
         open={open}
         onClose={handleClose}
